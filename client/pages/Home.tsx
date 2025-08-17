@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { getIconByPath, CriminalLawIcon, BusinessLawIcon, FamilyLawIcon, LitigationIcon, IntegrityIcon, ExcellenceIcon, DedicationIcon, QuoteIcon, PhoneIcon, EmailIcon, LocationIcon, ClockIcon } from "@/components/Icons";
 
 export function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -29,28 +30,28 @@ export function Home() {
 
   const services = [
     {
-      icon: "/assets/icons/services/criminal-law.svg",
+      IconComponent: CriminalLawIcon,
       title: "Criminal Defense",
       description:
         "Expert defense representation for criminal charges, from misdemeanors to serious felonies. We protect your rights and freedom with aggressive advocacy.",
       link: "/practice-areas#criminal",
     },
     {
-      icon: "/assets/icons/services/business-law.svg",
+      IconComponent: BusinessLawIcon,
       title: "Business Law",
       description:
         "Comprehensive business legal services including contract drafting, corporate formation, and compliance to protect your business interests.",
       link: "/practice-areas#business",
     },
     {
-      icon: "/assets/icons/services/family-law.svg",
+      IconComponent: FamilyLawIcon,
       title: "Family Law",
       description:
         "Compassionate representation for divorce, custody, adoption, and other family matters with personalized attention to your unique situation.",
       link: "/practice-areas#family",
     },
     {
-      icon: "/assets/icons/services/litigation.svg",
+      IconComponent: LitigationIcon,
       title: "Civil Litigation",
       description:
         "Strategic litigation representation for complex disputes, personal injury claims, and civil matters with proven courtroom success.",
@@ -60,19 +61,19 @@ export function Home() {
 
   const teamValues = [
     {
-      icon: "/assets/icons/values/integrity.svg",
+      IconComponent: IntegrityIcon,
       title: "Integrity",
       description:
         "We maintain the highest ethical standards in all our legal practice and client relationships.",
     },
     {
-      icon: "/assets/icons/values/excellence.svg",
+      IconComponent: ExcellenceIcon,
       title: "Excellence",
       description:
         "Our commitment to legal excellence drives us to achieve the best possible outcomes for our clients.",
     },
     {
-      icon: "/assets/icons/values/dedication.svg",
+      IconComponent: DedicationIcon,
       title: "Dedication",
       description:
         "We are dedicated to providing personalized attention and unwavering support to every client.",
@@ -382,11 +383,7 @@ export function Home() {
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img
-                      src={value.icon}
-                      alt={`${value.title} icon`}
-                      className="w-8 h-8 filter brightness-0 invert"
-                    />
+                    <value.IconComponent className="w-8 h-8 filter brightness-0 invert" />
                   </div>
                   <h4 className="text-xl font-montserrat font-bold text-lawfirm-dark-blue mb-4 text-center group-hover:text-lawfirm-gold transition-colors duration-300">
                     {value.title}
@@ -455,11 +452,7 @@ export function Home() {
               >
                 <div className="relative">
                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <img
-                      src={service.icon}
-                      alt={`${service.title} icon`}
-                      className="w-8 h-8 filter brightness-0 invert"
-                    />
+                    <service.IconComponent className="w-8 h-8 filter brightness-0 invert" />
                   </div>
                   <h3 className="text-xl font-montserrat font-bold text-lawfirm-dark-blue mb-4 text-center group-hover:text-lawfirm-gold transition-colors duration-300">
                     {service.title}
@@ -566,11 +559,7 @@ export function Home() {
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-full flex items-center justify-center shadow-lg">
-                  <img
-                    src="/assets/icons/ui/quote.svg"
-                    alt="Quote"
-                    className="w-10 h-10 filter brightness-0 invert"
-                  />
+                  <QuoteIcon className="w-10 h-10 filter brightness-0 invert" />
                 </div>
                 <blockquote className="text-xl md:text-2xl text-lawfirm-dark-navy font-roboto mb-8 italic leading-relaxed max-w-3xl mx-auto">
                   "{testimonials[currentTestimonial].text}"
@@ -879,11 +868,7 @@ export function Home() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img
-                      src="/assets/icons/contact/phone.svg"
-                      alt="Phone"
-                      className="w-6 h-6 filter brightness-0 invert"
-                    />
+                    <PhoneIcon className="w-6 h-6 filter brightness-0 invert" />
                   </div>
                   <div>
                     <div className="text-lawfirm-gold font-roboto font-medium">
@@ -896,11 +881,7 @@ export function Home() {
                 </div>
                 <div className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img
-                      src="/assets/icons/contact/email.svg"
-                      alt="Email"
-                      className="w-6 h-6 filter brightness-0 invert"
-                    />
+                    <EmailIcon className="w-6 h-6 filter brightness-0 invert" />
                   </div>
                   <div>
                     <div className="text-lawfirm-gold font-roboto font-medium">
@@ -913,11 +894,7 @@ export function Home() {
                 </div>
                 <div className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img
-                      src="/assets/icons/contact/location.svg"
-                      alt="Location"
-                      className="w-6 h-6 filter brightness-0 invert"
-                    />
+                    <LocationIcon className="w-6 h-6 filter brightness-0 invert" />
                   </div>
                   <div>
                     <div className="text-lawfirm-gold font-roboto font-medium">
@@ -932,11 +909,7 @@ export function Home() {
                 </div>
                 <div className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img
-                      src="/assets/icons/contact/clock.svg"
-                      alt="Hours"
-                      className="w-6 h-6 filter brightness-0 invert"
-                    />
+                    <ClockIcon className="w-6 h-6 filter brightness-0 invert" />
                   </div>
                   <div>
                     <div className="text-lawfirm-gold font-roboto font-medium">
