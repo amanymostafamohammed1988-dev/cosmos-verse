@@ -1,6 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { getIconByPath, CriminalLawIcon, BusinessLawIcon, FamilyLawIcon, LitigationIcon, IntegrityIcon, ExcellenceIcon, DedicationIcon, QuoteIcon, PhoneIcon, EmailIcon, LocationIcon, ClockIcon } from "@/components/Icons";
+import {
+  getIconByPath,
+  CriminalLawIcon,
+  BusinessLawIcon,
+  FamilyLawIcon,
+  LitigationIcon,
+  IntegrityIcon,
+  ExcellenceIcon,
+  DedicationIcon,
+  QuoteIcon,
+  PhoneIcon,
+  EmailIcon,
+  LocationIcon,
+  ClockIcon,
+} from "@/components/Icons";
 
 export function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
