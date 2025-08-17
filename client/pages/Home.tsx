@@ -141,18 +141,18 @@ export function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-lawfirm-dark-blue">
       {/* Enhanced Hero Section with Parallax Effect */}
       <section 
         className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
-          backgroundImage: "linear-gradient(135deg, rgba(0, 3, 73, 0.8) 0%, rgba(12, 27, 99, 0.7) 50%, rgba(0, 3, 73, 0.8) 100%), url('/assets/images/hero-background.jpg')"
+          backgroundImage: "linear-gradient(135deg, rgba(0, 3, 73, 0.9) 0%, rgba(12, 27, 99, 0.8) 50%, rgba(0, 3, 73, 0.9) 100%), url('/assets/images/hero-background.jpg')"
         }}
       >
         {/* Elegant overlay pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-lawfirm-dark-blue/20 to-transparent">
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(230, 166, 30, 0.3) 1px, transparent 0)",
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-lawfirm-medium-navy/30 to-transparent">
+          <div className="absolute inset-0 opacity-15" style={{
+            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(230, 166, 30, 0.4) 1px, transparent 0)",
             backgroundSize: "40px 40px"
           }}></div>
         </div>
@@ -168,7 +168,7 @@ export function Home() {
               Your Legal Success
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-lawfirm-gold to-yellow-400"> Starts Here</span>
             </h1>
-            <p className="text-xl md:text-2xl font-roboto mb-8 leading-relaxed max-w-3xl mx-auto opacity-90 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+            <p className="text-xl md:text-2xl font-roboto mb-8 leading-relaxed max-w-3xl mx-auto opacity-95 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
               With over 25 years of proven excellence, we deliver strategic legal solutions 
               that protect your interests and secure your future.
             </p>
@@ -205,12 +205,12 @@ export function Home() {
         </div>
       </section>
 
-      {/* Enhanced About Section with Elegant Cards */}
-      <section className="bg-gradient-to-br from-white to-gray-50 py-20 relative overflow-hidden">
+      {/* Enhanced About Section with Dark Background */}
+      <section className="bg-gradient-to-br from-lawfirm-dark-blue via-lawfirm-medium-navy to-lawfirm-dark-blue py-20 relative overflow-hidden">
         {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-10">
           <div style={{
-            backgroundImage: "linear-gradient(45deg, transparent 35%, rgba(0, 3, 73, 0.1) 35%, rgba(0, 3, 73, 0.1) 65%, transparent 65%)",
+            backgroundImage: "linear-gradient(45deg, transparent 35%, rgba(230, 166, 30, 0.1) 35%, rgba(230, 166, 30, 0.1) 65%, transparent 65%)",
             backgroundSize: "60px 60px"
           }}></div>
         </div>
@@ -239,7 +239,7 @@ export function Home() {
                     className="w-full rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 filter contrast-110"
                     style={{ filter: "sepia(5%) saturate(110%) hue-rotate(200deg) brightness(1.05)" }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-lawfirm-dark-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-lawfirm-gold/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             </div>
@@ -251,19 +251,19 @@ export function Home() {
               }`}
             >
               <div className="mb-4">
-                <span className="inline-block bg-gradient-to-r from-lawfirm-light-gray to-gray-100 text-lawfirm-dark-blue px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide shadow-md">
+                <span className="inline-block bg-gradient-to-r from-lawfirm-gold/20 to-yellow-400/20 border border-lawfirm-gold/30 text-lawfirm-gold px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide shadow-md backdrop-blur-sm">
                   About Our Firm
                 </span>
               </div>
-              <h2 className="text-4xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-lawfirm-gold to-yellow-600 mb-6">
+              <h2 className="text-4xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200 mb-6">
                 Your Trusted Legal Partners for Over 25 Years
               </h2>
-              <p className="text-lg text-lawfirm-dark-navy mb-6 font-roboto leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 font-roboto leading-relaxed">
                 Our experienced team of attorneys brings together decades of combined expertise 
                 across multiple practice areas. We are committed to providing personalized, 
                 strategic legal counsel that protects your interests and achieves your goals.
               </p>
-              <p className="text-lg text-lawfirm-dark-navy mb-8 font-roboto leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 font-roboto leading-relaxed">
                 From complex business transactions to personal legal matters, we approach every 
                 case with meticulous attention to detail and unwavering dedication to our clients' success.
               </p>
@@ -281,7 +281,7 @@ export function Home() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-block border-2 border-lawfirm-gold text-lawfirm-gold font-roboto font-medium px-8 py-4 rounded-lg hover:bg-lawfirm-gold hover:text-white transition-all duration-300 text-lg shadow-md hover:shadow-lg"
+                  className="inline-block border-2 border-white text-white font-roboto font-medium px-8 py-4 rounded-lg hover:bg-white hover:text-lawfirm-dark-blue transition-all duration-300 text-lg shadow-md hover:shadow-lg backdrop-blur-sm"
                 >
                   Get in Touch
                 </Link>
@@ -289,7 +289,7 @@ export function Home() {
             </div>
           </div>
 
-          {/* Team Values Cards */}
+          {/* Team Values Cards - White cards on dark background */}
           <div 
             id="values-section"
             data-animate
@@ -298,10 +298,10 @@ export function Home() {
             }`}
           >
             <div className="text-center mb-12">
-              <span className="inline-block bg-gradient-to-r from-lawfirm-gold/10 to-yellow-400/10 text-lawfirm-dark-blue px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide mb-4">
+              <span className="inline-block bg-gradient-to-r from-lawfirm-gold/20 to-yellow-400/20 border border-lawfirm-gold/30 text-lawfirm-gold px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide mb-4 backdrop-blur-sm">
                 Our Core Values
               </span>
-              <h3 className="text-3xl font-montserrat font-bold text-lawfirm-dark-blue">
+              <h3 className="text-3xl font-montserrat font-bold text-white">
                 What Drives Our Excellence
               </h3>
             </div>
@@ -309,13 +309,13 @@ export function Home() {
               {teamValues.map((value, index) => (
                 <div 
                   key={index}
-                  className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+                  className="group bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-lawfirm-gold/30"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <img src={value.icon} alt={`${value.title} icon`} className="w-8 h-8 filter brightness-0 invert" />
                   </div>
-                  <h4 className="text-xl font-montserrat font-bold text-lawfirm-dark-blue mb-4 text-center">
+                  <h4 className="text-xl font-montserrat font-bold text-lawfirm-dark-blue mb-4 text-center group-hover:text-lawfirm-gold transition-colors duration-300">
                     {value.title}
                   </h4>
                   <p className="text-lawfirm-dark-navy font-roboto leading-relaxed text-center">
@@ -328,12 +328,12 @@ export function Home() {
         </div>
       </section>
 
-      {/* Enhanced Services Overview with Premium Cards */}
-      <section className="bg-gradient-to-br from-lawfirm-light-gray via-gray-50 to-lawfirm-light-gray py-20 relative">
+      {/* Enhanced Services Overview with Dark Background and White Cards */}
+      <section className="bg-gradient-to-br from-lawfirm-medium-navy via-lawfirm-dark-blue to-lawfirm-medium-navy py-20 relative">
         {/* Elegant texture overlay */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <div style={{
-            backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0, 3, 73, 0.1) 1px, transparent 0)",
+            backgroundImage: "radial-gradient(circle at 1px 1px, rgba(230, 166, 30, 0.2) 1px, transparent 0)",
             backgroundSize: "50px 50px"
           }}></div>
         </div>
@@ -351,10 +351,10 @@ export function Home() {
                 Our Legal Services
               </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-lawfirm-gold to-yellow-600 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200 mb-6">
               Comprehensive Legal Solutions
             </h2>
-            <p className="text-lg text-lawfirm-dark-navy font-roboto max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 font-roboto max-w-3xl mx-auto leading-relaxed">
               We provide expert legal representation across multiple practice areas, 
               ensuring comprehensive solutions for all your legal needs.
             </p>
@@ -370,11 +370,8 @@ export function Home() {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 hover:border-lawfirm-gold/30"
-                style={{ 
-                  animationDelay: `${index * 0.1}s`,
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%)"
-                }}
+                className="group bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-lawfirm-gold/30"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative">
                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
@@ -422,9 +419,9 @@ export function Home() {
         </div>
       </section>
 
-      {/* Enhanced Testimonials with Elegant Design */}
-      <section className="bg-gradient-to-br from-white to-gray-50 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
+      {/* Enhanced Testimonials with Dark Background and White Card */}
+      <section className="bg-gradient-to-br from-lawfirm-dark-blue via-lawfirm-medium-navy to-lawfirm-dark-blue py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
           <div style={{
             backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(230, 166, 30, 0.1) 10px, rgba(230, 166, 30, 0.1) 20px)",
           }}></div>
@@ -439,14 +436,14 @@ export function Home() {
             }`}
           >
             <div className="mb-4">
-              <span className="inline-block bg-gradient-to-r from-lawfirm-light-gray to-gray-100 text-lawfirm-dark-blue px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide shadow-md">
+              <span className="inline-block bg-gradient-to-r from-lawfirm-gold/20 to-yellow-400/20 border border-lawfirm-gold/30 text-lawfirm-gold px-6 py-3 rounded-full text-sm font-roboto font-medium uppercase tracking-wide shadow-md backdrop-blur-sm">
                 Client Testimonials
               </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-lawfirm-gold to-yellow-600 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200 mb-6">
               What Our Clients Say
             </h2>
-            <p className="text-lg text-lawfirm-dark-navy font-roboto max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 font-roboto max-w-3xl mx-auto leading-relaxed">
               Don't just take our word for it. Here's what our satisfied clients have to say about our legal services.
             </p>
           </div>
@@ -458,7 +455,7 @@ export function Home() {
               isVisible['testimonials-carousel'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="bg-gradient-to-br from-white/95 to-gray-50/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-white/50">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-lawfirm-gold to-yellow-400 rounded-full flex items-center justify-center shadow-lg">
                   <img src="/assets/icons/ui/quote.svg" alt="Quote" className="w-10 h-10 filter brightness-0 invert" />
@@ -501,7 +498,7 @@ export function Home() {
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
                     index === currentTestimonial 
                       ? 'bg-gradient-to-r from-lawfirm-gold to-yellow-400 scale-125 shadow-lg' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      : 'bg-gray-400 hover:bg-gray-300'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -511,7 +508,7 @@ export function Home() {
             {/* Enhanced Navigation Arrows */}
             <button
               onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl hover:bg-lawfirm-gold hover:text-white transition-all duration-300 group border border-gray-100"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-white rounded-full p-4 shadow-xl hover:bg-lawfirm-gold hover:text-white transition-all duration-300 group border border-gray-100"
               aria-label="Previous testimonial"
             >
               <svg className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -520,7 +517,7 @@ export function Home() {
             </button>
             <button
               onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl hover:bg-lawfirm-gold hover:text-white transition-all duration-300 group border border-gray-100"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 bg-white rounded-full p-4 shadow-xl hover:bg-lawfirm-gold hover:text-white transition-all duration-300 group border border-gray-100"
               aria-label="Next testimonial"
             >
               <svg className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -531,11 +528,11 @@ export function Home() {
         </div>
       </section>
 
-      {/* New Legal Insights Section */}
-      <section className="bg-gradient-to-br from-lawfirm-light-gray via-gray-100 to-lawfirm-light-gray py-20 relative">
-        <div className="absolute inset-0 opacity-20">
+      {/* Legal Insights Section with Dark Background and White Cards */}
+      <section className="bg-gradient-to-br from-lawfirm-medium-navy via-lawfirm-dark-blue to-lawfirm-medium-navy py-20 relative">
+        <div className="absolute inset-0 opacity-15">
           <div style={{
-            backgroundImage: "linear-gradient(30deg, transparent 40%, rgba(0, 3, 73, 0.05) 40%, rgba(0, 3, 73, 0.05) 60%, transparent 60%)",
+            backgroundImage: "linear-gradient(30deg, transparent 40%, rgba(230, 166, 30, 0.1) 40%, rgba(230, 166, 30, 0.1) 60%, transparent 60%)",
             backgroundSize: "80px 80px"
           }}></div>
         </div>
@@ -553,10 +550,10 @@ export function Home() {
                 Legal Insights
               </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-lawfirm-gold to-yellow-600 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200 mb-6">
               Latest Legal Updates & Articles
             </h2>
-            <p className="text-lg text-lawfirm-dark-navy font-roboto max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 font-roboto max-w-3xl mx-auto leading-relaxed">
               Stay informed with our latest legal insights, updates, and expert analysis on current legal matters.
             </p>
           </div>
@@ -571,7 +568,7 @@ export function Home() {
             {legalInsights.map((insight, index) => (
               <article 
                 key={index}
-                className="group bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-white/50"
+                className="group bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100 hover:border-lawfirm-gold/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -633,7 +630,7 @@ export function Home() {
       {/* Enhanced Contact/CTA Section */}
       <section className="bg-gradient-to-br from-lawfirm-dark-blue via-lawfirm-medium-navy to-lawfirm-dark-blue py-20 relative overflow-hidden">
         {/* Elegant pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-15">
           <div style={{
             backgroundImage: "radial-gradient(circle at 25% 25%, rgba(230, 166, 30, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(230, 166, 30, 0.2) 0%, transparent 50%)",
           }}></div>
@@ -673,7 +670,7 @@ export function Home() {
                 </span>
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-xl">
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-xl">
               <h3 className="text-2xl font-montserrat font-bold text-white mb-6">
                 Contact Information
               </h3>
